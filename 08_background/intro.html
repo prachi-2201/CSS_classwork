@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .background{
+            background-image: url(background.webp);
+            height: 500px;
+        } */
+        .fixed{
+            background-image: url(background.webp);
+            height: 500px;
+            background-attachment: fixed;
+        }
+        .clip{
+            background-image: url(background.webp);
+            height: 500px;
+            border: 20px dashed rgba(0, 128, 255, 0.461);
+            background-clip: padding-box;
+        }
+        .color{
+            height: 250px;
+            background-color: bisque;
+        }
+        .norepeat{
+            background-image: url(background.webp);
+            height: 500px;
+            background-repeat: no-repeat;
+        }
+        .position{
+            background-position: center;
+            background-image: url(balloon.webp);
+            width: 100%;
+            height: 300px;
+        }
+        .size{
+            background-image: url(balloon.webp);
+            width: 100%;
+            height:700px;
+            background-size:50%;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Background Properties</h1>
+    <div class="background fixed">
+        <h2>background attachment:fixed</h2>
+    </div>
+    <div class="background scroll">
+        <h2>background attachment:scroll</h2>
+    </div>
+    <br>
+    <div class="background clip">
+        <h2>background clip</h2>
+    </div>
+    <div class="background color">
+        <h2>background-color</h2>
+    </div>
+    <div class="background norepeat">
+        <h2>background no repeat</h2>
+    </div>
+    <div class="background position">
+        <h2>position</h2>
+    </div>
+    <div class="background size">
+        <h2>background size</h2>
+    </div>
+</body>
+</html>

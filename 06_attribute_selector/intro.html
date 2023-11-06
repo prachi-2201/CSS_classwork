@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* <elements with a title attribute */
+        [title]
+        {
+            color: green;
+        }
+        /*  elements with a class matching "division" */
+        [class="division"]
+        {
+            border: 2px solid red;
+        }
+        /* <elements with a class ending with "uit" */
+        [class$="uit"]
+        {
+            background-color: lightcyan;
+        }
+        /*  elements with a class containing word seasonal with / with out space */
+        [class*="seasonal"]
+        {
+            background-color: lightblue;
+            font-style: italic;
+        }
+        /*  elements with a class containing word test particularly with space on both ends */
+        [class~="test"]
+        {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>Attribute selectors</h1>
+
+    <div class="division">
+        <h2><a title="link" href="#">List</a></h2>
+        <ul class="fruit">
+            <li class="seasonalfruit" id="">Apple</li>
+            <li class="fruit" id="">Banana</li>
+            <li class="seasonalfruit" id="">Kiwi</li>
+            <li class="fruit" id="">Orange</li>
+            <li class="seasonalfruit" id="">Water melon</li>
+            <li class="fruit" id="">Musk melon</li>
+            <li class="seasonalfruit" id="">Dragon fruit</li>
+            <li class="fruit" id="">Mango</li>
+            <li class="seasonalfruit" id="">Guava</li>
+            <li class="fruit" id="">Grapes</li>
+        </ul>
+        <p class="example ">Example</p>
+        <p class="test">test</p>
+        <p class="example test">Example & test</p>
+
+    </div>
+
+
+
+    <section aria-labelledby="syntax"><h2 id="syntax"><a href="#syntax">Syntax</a></h2><div class="section-content"><dl>
+        <dt id="attr"><a href="#attr"><code>[attr]</code></a></dt>
+        <dd>
+          <p>Represents elements with a attribute name of <em>attr</em>.</p>
+        </dd>
+        <dt id="attrvalue"><a href="#attrvalue"><code>[attr=value]</code></a></dt>
+        <dd>
+          <p>Represents elements with a attribute name of <em>attr</em> whose value is exactly <em>value</em>.</p>
+        </dd>
+        <dt id="attrvalue_2"><a href="#attrvalue_2"><code>[attr~=value]</code></a></dt>
+        <dd>
+          <p>Represents elements with a attribute name of <em>attr</em> whose value is a whitespace-separated list of words, one of which is exactly <em>value</em>.</p>
+        </dd>
+        <dt id="attrvalue_3"><a href="#attrvalue_3"><code>[attr|=value]</code></a></dt>
+        <dd>
+          <p>Represents elements with a attribute name of <em>attr</em> whose value can be exactly <em>value</em> or can begin with <em>value</em> immediately followed by a hyphen, <code>-</code> (U+002D). It is often used for language subcode matches.</p>
+        </dd>
+        <dt id="attrvalue_4"><a href="#attrvalue_4"><code>[attr^=value]</code></a></dt>
+        <dd>
+          <p>Represents elements with a attribute name of <em>attr</em> whose value is prefixed (preceded) by <em>value</em>.</p>
+        </dd>
+        <dt id="attrvalue_5"><a href="#attrvalue_5"><code>[attr$=value]</code></a></dt>
+        <dd>
+          <p>Represents elements with a attribute name of <em>attr</em> whose value is suffixed (followed) by <em>value</em>.</p>
+        </dd>
+        <dt id="attrvalue_6"><a href="#attrvalue_6"><code>[attr*=value]</code></a></dt>
+        <dd>
+          <p>Represents elements with a attribute name of <em>attr</em> whose value contains at least one occurrence of <em>value</em> within the string.</p>
+        </dd>
+        <dt id="attr_operator_value_i"><a href="#attr_operator_value_i"><code>[attr operator value i]</code></a></dt>
+        <dd>
+          <p>Adding an <code>i</code> (or <code>I</code>) before the closing bracket causes the value to be compared case-insensitively (for characters within the <a href="/en-US/docs/Glossary/ASCII">ASCII</a> range).</p>
+        </dd>
+        <dt id="attr_operator_value_s"><a href="#attr_operator_value_s"><code>[attr operator value s]</code></a> <abbr class="icon icon-experimental" title="Experimental. Expect behavior to change in the future.">
+          <span class="visually-hidden">Experimental</span>
+      </abbr></dt>
+        <dd>
+          <p>Adding an <code>s</code> (or <code>S</code>) before the closing bracket causes the value to be compared case-sensitively (for characters within the <a href="/en-US/docs/Glossary/ASCII">ASCII</a> range).</p>
+        </dd>
+      </dl></div></section>
+
+</body>
+</html>

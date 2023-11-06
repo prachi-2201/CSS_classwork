@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1::after,
+        h1::before {
+            content: "~";
+        }
+
+        .firstlt::first-letter {
+            font-size: 40px;
+            color: rgb(43, 40, 40);
+            font-weight: 900;
+        }
+        .firstlt::first-line{
+            font-size: 25px;
+        }
+        .firstlt::selection{
+            background-color: lightcyan;
+            color: red;
+        }
+        input::placeholder{
+            color: lightgray;
+        }
+        li::marker{
+            color: rgb(106, 220, 106);
+            font-size: 40px;
+        }
+        button {
+            font-size: 1.2rem;
+            padding: 5px 15px;
+        }
+
+        dialog::backdrop {
+            background-color: rgb(222, 139, 130);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Psuedo Elements</h1>
+    <p class="firstlt">Once upon a time lived a big lion called Mufasa. Mufasa was a big broad lion and he had a brother
+        called Scar. Scar was a bad brother and was jealous of his brother Mufasa. Mufasa and his wife Sarabi had a
+        precious cub and they named him simba. They tort simba to be the bravest and the strongest lion that would have
+        had of ever lived, and they also protected him from his uncle scar. There was many other lion and lioness but
+        one nice beautiful day scar and Mufasa were fighting they were very seriously and the wanted each other died.
+        Mufasa sore his son Simba down the galley walking by himself but all the sudden his father see a Hurd of animal
+        running toward simba. Mufasa runs to simba a saves him but unfortunely Mufasa dies. For day Simba is sad and
+        does not want to talk. Over the time simba grows up and mets a lioness called Nala. Simba mets a pig, warthog
+        and a mearcat which become his best friend. Once Simba has grown up he has a kid called kiara. Kiara is a
+        lioness and she grows up with her family and her friends.</p>
+    <h3>Feedback</h3>
+    <input type="text" name="Feedback" id="Feedback" placeholder="Enter your reviews">
+    <ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<ol>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ol>
+<button id="showDialogBtn">Show a dialog</button>
+
+<dialog id="favDialog">
+    <form method="dialog">
+        <p>The background shown outside of this dialog is a backdrop.</p>
+        <button id="confirmBtn">Close the dialog</button>
+    </form>
+</dialog>
+<script>
+    const showDialogBtn = document.getElementById('showDialogBtn');
+    const favDialog = document.getElementById('favDialog');
+
+    showDialogBtn.addEventListener('click', () => favDialog.showModal());
+
+</script>
+</body>
+
+</html>
