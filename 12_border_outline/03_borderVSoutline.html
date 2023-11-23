@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .border-outline {
+            border: 15px dashed orangered;
+            outline: 15px dotted rgb(46, 83, 96);
+        }
+
+        a {
+            margin: 15px;
+        }
+
+        a:hover {
+            border: 10px double brown;
+            /* outline: 10px double brown; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Border VS Outline</h1>
+    <p>Outline differs from borders! Unlike border, the outline is drawn outside the element's border, and may overlap
+        other content. Also, the outline is NOT a part of the element's dimensions; the element's total width and height
+        is not affected by the width of the outline.</p>
+
+    <br>
+    <br>
+    Before Context
+    <div class="border-outline">
+        Diffrence between border vs outline
+    </div>
+    after Context
+    <br>
+    <br>
+
+</body>
+
+</html>
